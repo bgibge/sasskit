@@ -1,0 +1,5 @@
+@mixin vertial-center ($position: absolute) {
+  @include translate(0, -50%);
+  position: $position;
+  top: 50%;
+}

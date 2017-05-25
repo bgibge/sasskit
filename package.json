@@ -1,0 +1,12 @@
+{
+  "name": "sasskit",
+  "version": "1.0.0",
+  "description": "Sass useful mixin collection and code fragment",
+  "main": "mixin.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xsmallbird",
+  "license": "MIT",
+  "devDependencies": {}
+}

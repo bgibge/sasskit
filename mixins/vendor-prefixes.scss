@@ -1,0 +1,38 @@
+
+
+@mixin translate ($x, $y, $isMs: false) {
+  -webkit-transform: translate($x, $y);
+          transform: translate($x, $y);
+
+  // 是否需要兼容IE9
+  @if $isMs {
+      -ms-transform: translate($x, $y); // IE9 only
+  }
+}
+
+@mixin background-clip ($value, $isMoz: false) {
+  -webkit-background-clip: $value;
+          background-clip: $value;
+
+  @if $isMoz {
+     -moz-background-clip: $value;
+  }
+}
+
+@mixin appearance ($value: none, $isMoz: false) {
+  -webkit-appearance: $value;
+          appearance: $value;
+
+  @if $isMoz {
+     -moz-appearance: $value;
+  }
+}
+
+@mixin transition($transition, $isO: false) {
+  -webkit-transition: $transition;
+          transition: $transition;
+
+  @if $isO {
+       -o-transition: $transition;
+  }
+}
