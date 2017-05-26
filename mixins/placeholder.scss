@@ -1,7 +1,7 @@
 
 // 为Input里的Placeholder设置样式
 
-@mixin input-placeholder ($size, $color, $padding) {
+@mixin placeholder ($size, $color, $padding) {
   &::-webkit-input-placeholder {
     padding: $padding;
     font-size: $size;
