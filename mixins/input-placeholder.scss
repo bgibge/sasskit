@@ -1,0 +1,8 @@
+
+// 为Input里的Placeholder设置样式
+
+@mixin input-placeholder ($size, $color, $padding) {
+  padding: $padding;
+  font-size: $size;
+  color: $color;
+}
