@@ -16,6 +16,7 @@
 @mixin square-responsive ($size) {
   position: relative;
   width: $size;
+  margin: 0 auto;
   &:before {
     content: '';
     display: block;
@@ -33,6 +34,7 @@
 @mixin rect-responsive ($width, $scale) {
   position: relative;
   width: $width;
+  margin: 0 auto;
   &:before {
     content: '';
     display: block;
