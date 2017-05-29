@@ -1,8 +1,11 @@
 
 // 隐藏SVG矢量图定义块
 
-.svg-defs {
-  @include size(0, 0);
-  position: absolute;
-  visibility: hidden;
+
+@mixin svgdefs-hidden {
+  .svg-defs {
+    @include size(0, 0);
+    position: absolute;
+    visibility: hidden;
+  }
 }
