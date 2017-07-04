@@ -1,0 +1,13 @@
+// 改变CSS的盒子模型
+// 将padding和border包含至width
+
+@mixin box-border {
+  * {
+    box-sizing: border-box;
+
+    &::before
+    &::after {
+      box-sizing: border-box;
+    }
+  }
+}

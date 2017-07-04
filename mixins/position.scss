@@ -18,7 +18,7 @@
   left: $left;
 }
 
-//固定定位
+// 固定定位
 @mixin fixed ($top, $right, $bottom, $left) {
   position: fixed;
   top: $top;
@@ -34,11 +34,21 @@
   left: $left;
 }
 
+// Alias 左上角
+@mixin tl ($position, $top, $left) {
+  @include top-left ($position, $top, $left);
+}
+
 // 右上角
 @mixin top-right ($position, $top, $right) {
   position: $position;
   top: $top;
   right: $right;
+}
+
+// Alias 右上角
+@mixin tr ($position, $top, $right) {
+  @include top-right($position, $top, $right);
 }
 
 // 左下角
@@ -48,9 +58,47 @@
   left: $left;
 }
 
+// Alias 左下角
+@mixin bl ($position, $bottom, $left) {
+  @include bottom-left ($position, $bottom, $left);
+}
+
 // 右下角
 @mixin bottom-right ($position, $bottom, $right) {
   position: $position;
   bottom: $bottom;
   right: $right;
+}
+
+// Alias 右下角
+@mixin br ($position, $bottom, $right) {
+  @include bottom-right ($position, $bottom, $right);
+}
+
+// 相对垂直正偏移
+@mixin offset-top ($top, $position: relative) {
+  position: $position;
+  top: $top;
+  transform: translate(0, -50%);
+}
+
+// 相对右边正偏移
+@mixin offset-right ($right, $position: relative) {
+  position: $position;
+  top: $right;
+  transform: translate(50%, 0);
+}
+
+// 相对左边正偏移
+@mixin offset-left ($left, $position: relative) {
+  position: $position;
+  left: $left;
+  transform: translate(-50%, 0);
+}
+
+// 相对底部正偏移
+@mixin offset-bottom ($bottom, $position: relative) {
+  position: $position;
+  bottom: $bottom;
+  transform: translate(0, 50%);
 }

@@ -4,6 +4,12 @@
   height: $height;
 }
 
+@mixin width-center ($width) {
+  width: $width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // 宽高一样
 @mixin square ($size) {
   @include size($size, $size);

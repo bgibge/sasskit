@@ -1,0 +1,7 @@
+// 水平居中设置
+
+@mixin horizontal-center ($position: absolute) {
+  position: $position;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

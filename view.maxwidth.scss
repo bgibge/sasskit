@@ -1,0 +1,17 @@
+// 设置视口最大的现实宽度
+
+@import './variables';
+
+@mixin view-maxwidth ($width:768px) {
+  @media (min-width:769px) {
+    html {
+      background: $very-dark-gray;
+    }
+
+    body {
+      background: $white;
+      margin: 0 auto;
+      width: $width;
+    }
+  }
+}

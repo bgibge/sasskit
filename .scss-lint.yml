@@ -1,0 +1,16 @@
+
+exclude: './normalize.scss'
+
+linters:
+  ColorVariable:
+    enabled: true
+  HexLength:
+    style: long
+  HexNotation:
+    style: lowercase
+  StringQuotes:
+    style: single_quotes
+  convention:
+    convention: hyphenated_lowercase
+  LeadingZero:
+    style: include_zero

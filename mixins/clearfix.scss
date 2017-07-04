@@ -11,12 +11,13 @@
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
 
 @mixin clearfix () {
-  &:before,
-  &:after {
-    content: " ";
+  &::before,
+  &::after {
+    content: ' ';
     display: table;
   }
-  &:after {
+
+  &::after {
     clear: both;
   }
 }

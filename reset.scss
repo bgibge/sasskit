@@ -1,0 +1,57 @@
+
+@import './variables';
+
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  color: $very-dark-gray;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+span, i, sup, em {
+  font-style: normal;
+}
+
+input,
+textarea,
+button {
+  padding: 0;
+  border: 0;
+  outline: 0 !important;
+  background: #FFFFFF;
+  appearance: none;
+}

@@ -1,9 +1,10 @@
 // Text overflow
 // Requires inline-block or block for proper styling
-// 截取文本。用"..."来代替被截取的文本
+// ellipsis: 用"..."来代替被截取的文本
+// clip: 直接修建文本
 
-@mixin text-overflow () {
+@mixin text-overflow ($mode: ellipsis) {
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: $mode;
 }

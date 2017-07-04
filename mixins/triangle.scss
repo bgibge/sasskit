@@ -2,30 +2,27 @@
 //传入三个参数
 //$direction(方向: top, right, bottom, left), $size(三角形大小), $borderColor(三角形颜色)
 
-@mixin triangle($direction, $size, $borderColor ) {
-  content:"";
+@mixin triangle($direction, $size, $border-color) {
+  content: ' ';
   height: 0;
   width: 0;
-  overflow:hidden;
+  overflow: hidden;
 
   @if $direction == top {
-    border-bottom:$size solid $borderColor;
-    border-left:$size solid transparent;
-    border-right:$size solid transparent;
-  }
-  @else if $direction == right {
-    border-left:$size solid $borderColor;
-    border-top:$size solid transparent;
-    border-bottom:$size solid transparent;
-  }
-  @else if $direction == bottom {
-    border-top:$size solid $borderColor;
-    border-left:$size solid transparent;
-    border-right:$size solid transparent;
-  }
-  @else if $direction == left {
-    border-right:$size solid $borderColor;
-    border-top:$size solid transparent;
-    border-bottom:$size solid transparent;
+    border-bottom: $size solid $border-color;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+  } @else if $direction == right {
+    border-bottom: $size solid transparent;
+    border-left: $size solid $border-color;
+    border-top: $size solid transparent;
+  } @else if $direction == bottom {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $border-color;
+  } @else if $direction == left {
+    border-bottom: $size solid transparent;
+    border-right: $size solid $border-color;
+    border-top: $size solid transparent;
   }
 }
