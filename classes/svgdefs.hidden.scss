@@ -1,5 +1,7 @@
 
-// 隐藏SVG矢量图定义块
+// 隐藏 SVG 矢量图定义块
+
+@import '../mixins/size';
 
 
 @mixin svgdefs-hidden {

@@ -4,6 +4,7 @@
   "description": "Sass useful mixin collection and code fragment",
   "main": "mixin.scss",
   "scripts": {
+    "lint": "scss-lint ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "xsmallbird",

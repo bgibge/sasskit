@@ -9,20 +9,20 @@
   overflow: hidden;
 
   @if $direction == top {
+    border-right: $size solid transparent;
     border-bottom: $size solid $border-color;
     border-left: $size solid transparent;
-    border-right: $size solid transparent;
   } @else if $direction == right {
+    border-top: $size solid transparent;
     border-bottom: $size solid transparent;
     border-left: $size solid $border-color;
-    border-top: $size solid transparent;
   } @else if $direction == bottom {
-    border-left: $size solid transparent;
-    border-right: $size solid transparent;
     border-top: $size solid $border-color;
+    border-right: $size solid transparent;
+    border-left: $size solid transparent;
   } @else if $direction == left {
-    border-bottom: $size solid transparent;
-    border-right: $size solid $border-color;
     border-top: $size solid transparent;
+    border-right: $size solid $border-color;
+    border-bottom: $size solid transparent;
   }
 }

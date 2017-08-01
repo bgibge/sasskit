@@ -22,9 +22,9 @@
   margin: 0 auto;
 
   &::before {
-    content: '';
     display: block;
     padding: $scale 0 0;
+    content: '';
   }
 
   .content {

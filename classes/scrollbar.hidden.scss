@@ -1,0 +1,12 @@
+
+// 隐藏 scroll bar
+
+@import '../mixins/size';
+
+
+@mixin scrollbar-hidden {
+  :scrollbar {
+    @include size(0, 0);
+    display: none;
+  }
+}

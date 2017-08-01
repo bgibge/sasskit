@@ -3,8 +3,8 @@
 
 @mixin placeholder ($size, $color, $padding) {
   &::-webkit-input-placeholder {
-    color: $color;
-    font-size: $size;
     padding: $padding;
+    font-size: $size;
+    color: $color;
   }
 }
