@@ -2,7 +2,7 @@
 // 改变CSS的盒子模型
 // 将 padding 和 border 包含至 width
 
-@mixin box-border {
+@mixin boxsizing-border {
   * {
     box-sizing: border-box;
 
