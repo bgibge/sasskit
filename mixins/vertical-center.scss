@@ -5,3 +5,9 @@
   top: 50%;
   transform: translate(0, -50%);
 }
+
+
+// `vertial-center`的缩写
+@mixin vc ($position: absolute) {
+  @include vertial-center($position);
+}
