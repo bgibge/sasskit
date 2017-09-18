@@ -9,4 +9,8 @@
     @include size(0, 0);
     display: none;
   }
+
+  * {
+    -ms-overflow-style: none;
+  }
 }
