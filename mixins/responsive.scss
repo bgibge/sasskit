@@ -46,7 +46,7 @@
 //    <div class="content"></div>
 //  </div>
 @mixin square-responsive ($size) {
-  @include rect-responsive($size, $size);
+  @include rect-responsive($size, 100%);
 }
 
 
