@@ -1,6 +1,6 @@
 {
   "name": "sasskit",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Sass useful mixin collection and code fragment",
   "main": "mixin.scss",
   "scripts": {
