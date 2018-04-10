@@ -1,13 +1,22 @@
 {
   "name": "sasskit",
   "version": "1.0.0",
-  "description": "Sass useful mixin collection and code fragment",
-  "main": "mixin.scss",
-  "scripts": {
-    "lint": "scss-lint ./",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Sass中有用高效的mixin和代码片段",
+  "main": "index.scss",
+  "dependencies": {
+    "sass-lint": "^1.12.1"
   },
-  "author": "xsmallbird",
-  "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@112.74.84.77:Libs/sasskit.git"
+  },
+  "keywords": [
+    "sass",
+    "mixin",
+    "sasskit"
+  ],
+  "author": "xiaorujun",
+  "license": "MIT"
 }
