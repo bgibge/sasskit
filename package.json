@@ -1,7 +1,7 @@
 {
   "name": "sasskit",
-  "version": "1.0.0",
-  "description": "Sass中有用高效的mixin和代码片段",
+  "version": "1.0.2",
+  "description": "sass中有用的、高效的mixin、class和组件",
   "main": "index.scss",
   "dependencies": {
     "sass-lint": "^1.12.1"
