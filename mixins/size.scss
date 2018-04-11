@@ -1,16 +1,105 @@
-// Sizing shortcuts
-@mixin size ($width, $height) {
+/*
+* @Author: xsmallbird
+* @Date:   2018-04-09 15:45:06
+* @Last Modified by:   xsmallbird
+* @Last Modified time: 2018-04-11 21:29:16
+* @Description: 大小
+*/
+
+
+@import './position';
+
+
+// 常规矩形, 可设定自动水平剧中
+// @Param {$width} 宽度
+// @Param {$height} 高度
+// @Param {$auto} 是否自动水平居中
+
+@mixin rect ($width, $height, $auto: false) {
   width: $width;
   height: $height;
+
+  @if $auto == true {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
-@mixin width-center ($width) {
+
+// 常规正方形, 可设定自动水平剧中
+// @Param {$size} 正方形边长
+// @Param {$auto} 是否自动水平居中
+
+@mixin square ($size, $auto: false) {
+  @include rect($size, $size, $auto);
+}
+
+
+// 响应式矩形, 可设定自动水平剧中
+// @Param {$width} 宽度
+// @Param {$scale} 伸缩比例
+// @Param {$auto} 是否自动水平居中
+// @HTML
+//   <div class="square-responsive">
+//     <div class="content"></div>
+//   </div>
+
+@mixin rect-responsive ($width, $scale, $auto: false) {
+  position: relative;
   width: $width;
-  margin-left: auto;
-  margin-right: auto;
+
+  @if $auto == true {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &::before {
+    display: block;
+    padding: $scale 0 0;
+    content: '';
+  }
+
+  .content {
+    @include rect(100%, 100%);
+    @include tr(absolute, 0, 0);
+  }
 }
 
-// 宽高一样
-@mixin square ($size) {
-  @include size($size, $size);
+
+// Alias `rect-responsive`
+// @Param {$width} 宽度
+// @Param {$scale} 伸缩比例
+// @Param {$auto} 是否自动水平居中
+
+@mixin rr ($width, $scale, $auto: false) {
+  @include rect-responsive($width, $scale, $auto);
+}
+
+
+// 响应式正方形, 可设定自动水平剧中
+// @Param {$size} 正方形边长
+// @Param {$auto} 是否自动水平居中
+// @HTML
+//   <div class="square-responsive">
+//      <div class="content"></div>
+//    </div>
+
+@mixin square-responsive ($size, $auto: false) {
+  @include rect-responsive($size, 100%, $auto);
+}
+
+
+// Alias `square-responsive`
+// @Param {$size} 正方形边长
+// @Param {$auto} 是否自动水平居中
+
+@mixin sr ($size, $auto: false) {
+  @include square-responsive($size, $auto);
+}
+
+
+// 填充想对父容器
+
+@mixn fill () {
+  @include rect(100%, 100%);
 }

@@ -1,27 +1,34 @@
+/*
+* @Author: xsmallbird
+* @Date:   2018-04-09 15:45:06
+* @Last Modified by:   xsmallbird
+* @Last Modified time: 2018-04-11 21:26:26
+* @Description: CSS Reset
+*/
 
+
+// http://necolas.github.io/normalize.css/
+
+@import './node_modules/normalize.css/normalize.css';
+@import './mixins';
 @import './variables';
 
+
+// 移除IOS有事件监听的元素被点击的时候会被高亮显示
 
 * {
   -webkit-tap-highlight-color: transparent;
 }
 
-html {
-  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-  font-size: 10px;
-  color: $very-dark-gray;
-}
+
+// 清除body元素的浮动
 
 body {
-  margin: 0;
-
-  &::before,
-  &::after {
-    display: table;
-    content: ' ';
-  }
-
+  @include clear();
 }
+
+
+// 设置段落和标题元素的字体粗细为正常
 
 p,
 h1,
@@ -30,9 +37,11 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
   font-weight: 300;
 }
+
+
+// 设置列表元素的padding和margin，并移除m默认的列表样式
 
 ol,
 ul,
@@ -42,12 +51,18 @@ li {
   list-style: none;
 }
 
+
+// 清除inline元素的默认样式
+
 span,
 i,
 sup,
 em {
   font-style: normal;
 }
+
+
+// 回归简单的表单元素样式
 
 input,
 textarea,

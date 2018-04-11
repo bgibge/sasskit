@@ -1,13 +1,37 @@
-// Opacity 透明度
-// 默认不兼容IE8以下,只需传入一个参数
-// 若需要兼容IE8以下时必须传入两个参数,且第二个参数的值为true;
+/*
+* @Author: xsmallbird
+* @Date:   2018-04-11 16:10:44
+* @Last Modified by:   xsmallbird
+* @Last Modified time: 2018-04-11 21:29:35
+* @Description: 透明度
+*/
 
-@mixin opacity ($opacity, $isie:false) {
+
+// 不透明度，若需兼容IE8以下则将第二个参数值设为true
+// @Param {$opacity} 不透明度
+// @Param {$isie} 是否需兼容IE8以下
+
+@mixin opacity ($opacity, $isie: false) {
   opacity: $opacity;
 
   // IE8 filter
   @if $isie {
     $opacity-ie: ($opacity * 100);
+    filter: alpha(opacity = $opacity-ie);
+  }
+}
+
+
+// 透明度，若需兼容IE8以下则将第二个参数值设为true
+// @Param {$opacity} 透明度
+// @Param {$isie} 是否需兼容IE8以下
+
+@mixin transparency ($opacity, $isie: false) {
+  opacity: 1 - $opacity;
+
+  // IE8 filter
+  @if $isie {
+    $opacity-ie: ((1 - $opacity) * 100);
     filter: alpha(opacity = $opacity-ie);
   }
 }

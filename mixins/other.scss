@@ -1,0 +1,20 @@
+/*
+* @Author: xsmallbird
+* @Date:   2018-04-11 17:39:28
+* @Last Modified by:   xsmallbird
+* @Last Modified time: 2018-04-11 17:43:57
+* @Description: 一些暂时不知怎么归类的mixin
+*/
+
+
+// 设置盒子模型
+// @Param {$type} 盒子模型
+
+@mixin box-sizing ($model: border-box) {
+  box-sizing: $model;
+
+  &::before,
+  &::after {
+    box-sizing: $model;
+  }
+}

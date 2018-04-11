@@ -4,10 +4,15 @@
   "description": "sass中有用的、高效的mixin、class和组件",
   "main": "index.scss",
   "dependencies": {
+    "normalize.css": "^8.0.0"
+  },
+  "devDependencies": {
     "sass-lint": "^1.12.1"
   },
-  "devDependencies": {},
-  "scripts": {},
+  "scripts": {
+    "lint": "./node_modules/.bin/sass-lint '**/*.scss' -v -q",
+    "test": "npm run lint",
+  },
   "repository": {
     "type": "git",
     "url": "git@112.74.84.77:Libs/sasskit.git"
@@ -17,6 +22,6 @@
     "mixin",
     "sasskit"
   ],
-  "author": "xiaorujun",
+  "author": "xsmallbird",
   "license": "MIT"
 }

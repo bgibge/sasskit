@@ -1,0 +1,22 @@
+/*
+* @Author: xsmallbird
+* @Date:   2018-04-11 16:10:44
+* @Last Modified by:   xsmallbird
+* @Last Modified time: 2018-04-11 16:32:53
+* @Description: Input样式
+*/
+
+
+// 为输入框的placeholder设置样式
+// @Param {($size} 字体大小
+// @Param {$color} 字体颜色
+// @Param {$padding} 填充距离
+
+@mixin placeholder ($size, $color, $padding) {
+  &::placeholder,
+  &::-webkit-input-placeholder {
+    padding: $padding;
+    font-size: $size;
+    color: $color;
+  }
+}
