@@ -1,0 +1,76 @@
+/*
+* @Author: xsmallbird
+* @Date:   2018-04-09 15:45:06
+* @Last Modified by:   xsmallbird
+* @Last Modified time: 2018-04-11 21:30:45
+* @Description: 十分有用的class样式
+*/
+
+
+@import './mixins';
+
+
+@charset 'UTF-8';
+
+
+// 以相对定位的方式垂直居中
+
+.mr {
+  @include vc(relative);
+}
+
+
+// 以绝对定位的方式垂直居中
+
+.ma {
+  @include vc(absolute);
+}
+
+
+// 以想对定位的方式水平居中
+
+.cr {
+  @include hc(relative);
+}
+
+
+// 以绝对定位的方式水平居中
+
+.ca {
+  @include hc(absolute);
+}
+
+
+// 清除浮动
+
+.clearfloat {
+  @include clear();
+}
+
+
+// 文本溢出时，以省略号代替溢出部分
+
+.ellipsis {
+  @include text-overflow(ellipsis);
+}
+
+
+// 向左浮动
+
+.float-l {
+  float: left;
+}
+
+
+// 向右浮动
+
+.float-r {
+  float: right;
+}
+
+
+// 斜体
+
+.italic {
+  font-style: italic;
+}

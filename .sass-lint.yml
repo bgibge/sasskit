@@ -1,0 +1,25 @@
+files:
+  include: '**/*.s+(a|c)ss'
+  ignore:
+    - 'node_modules/'
+rules:
+  indentation:
+    - 2
+    -
+      size: 2
+  no-css-comments:
+    - 0
+  property-sort-order:
+    - 1
+    -
+      order: recess
+  hex-length:
+    - 1
+    -
+      style: long
+  empty-args:
+    - 1
+    -
+      include: true
+  no-vendor-prefixes:
+    - 0

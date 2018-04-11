@@ -1,0 +1,40 @@
+/*
+* @Author: xsmallbird
+* @Date:   2018-04-11 16:10:44
+* @Last Modified by:   xsmallbird
+* @Last Modified time: 2018-04-11 21:46:38
+* @Description: 文本
+*/
+
+
+// 设置字体的大小和颜色
+// @Param {$size} 字体大小
+// @Param {$color} 字体颜色
+
+@mixin font ($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+
+
+// 不换行文本益处处理
+// @Param {$mode} 文本溢出处理方式
+
+@mixin overflow ($mode: ellipsis) {
+  overflow: hidden;
+  text-overflow: $mode;
+  white-space: nowrap;
+}
+
+
+// 文本隐藏
+
+@mixin hidden () {
+  // sass-lint:disable space-around-operator
+  font: 0/0;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}

@@ -1,13 +1,27 @@
 {
   "name": "sasskit",
-  "version": "1.0.2",
-  "description": "Sass useful mixin collection and code fragment",
-  "main": "mixin.scss",
-  "scripts": {
-    "lint": "scss-lint ./",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "2.0.0",
+  "description": "sass中有用的、高效的mixin、class和组件",
+  "main": "mixins.scss",
+  "dependencies": {
+    "normalize.css": "^8.0.0"
   },
+  "devDependencies": {
+    "sass-lint": "^1.12.1"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/sass-lint '**/*.scss' -v -q",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.genomics.cn:2200/DTCLab/Library/sasskit.git"
+  },
+  "keywords": [
+    "sass",
+    "mixin",
+    "sasskit"
+  ],
   "author": "xsmallbird",
-  "license": "MIT",
-  "devDependencies": {}
+  "license": "MIT"
 }

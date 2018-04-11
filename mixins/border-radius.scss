@@ -1,22 +1,72 @@
+/*
+* @Author: xsmallbird
+* @Date:   2018-04-09 15:45:06
+* @Last Modified by:   xsmallbird
+* @Last Modified time: 2018-04-11 21:40:28
+* @Description: 圆角
+*/
 
-// Single side border-radius
+
+// 顶部圆角
+// @Param {$radius} 圆角大小
 
 @mixin border-top-radius ($radius) {
   border-top-right-radius: $radius;
   border-top-left-radius: $radius;
 }
 
-@mixin border-right-radius ($radius) {
-  border-bottom-right-radius: $radius;
-  border-top-right-radius: $radius;
+
+// Alias `border-top-radius`
+
+@mixin top-radius ($radius) {
+  @include border-top-radius ($radius);
 }
 
-@mixin border-bottom-radius ($radius) {
+
+// 右边圆角
+// @Param {$radius} 圆角大小
+
+@mixin border-right-radius ($radius) {
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+
+
+// Alias `border-right-radius`
+
+@mixin right-radius ($radius) {
+  @include border-right-radius ($radius);
+}
+
+
+// 底部圆角
+// @Param {$radius} 圆角大小
+
+@mixin  ($radius) {
   border-bottom-right-radius: $radius;
   border-bottom-left-radius: $radius;
 }
+
+
+// Alias `border-bottom-radius`
+
+@mixin bottom-radius ($radius) {
+  @include border-bottom-radius ($radius);
+}
+
+
+// 左边圆角
+// @Param {$radius} 圆角大小
 
 @mixin border-left-radius ($radius) {
   border-bottom-left-radius: $radius;
   border-top-left-radius: $radius;
+}
+
+
+// Alias `border-left-radius`
+
+@mixin left-radius ($radius) {
+  @include border-left-radius ($radius);
 }

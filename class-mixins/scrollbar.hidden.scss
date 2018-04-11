@@ -1,0 +1,20 @@
+/*
+* @Author: xsmallbird
+* @Date:   2018-04-11 16:06:40
+* @Last Modified by:   xsmallbird
+* @Last Modified time: 2018-04-11 21:32:55
+* @Description: 隐藏 scrollbar
+*/
+
+
+@mixin scrollbar-hidden () {
+  ::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+
+  * {
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+  }
+}

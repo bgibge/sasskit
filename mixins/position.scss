@@ -1,5 +1,18 @@
-//定位
-//绝对定位
+/*
+* @Author: xsmallbird
+* @Date:   2018-04-09 15:45:06
+* @Last Modified by:   xsmallbird
+* @Last Modified time: 2018-04-11 21:32:00
+* @Description: 定位
+*/
+
+
+// 绝对定位
+// @Param {$top} 顶部偏移距离
+// @Param {$right} 右边偏移距离
+// @Param {$bottom} 底部偏移距离
+// @Param {$left} 左边偏移距离
+
 @mixin absolute ($top, $right, $bottom, $left) {
   position: absolute;
   top: $top;
@@ -9,7 +22,12 @@
 }
 
 
-//相对定位
+// 相对定位
+// @Param {$top} 顶部偏移距离
+// @Param {$right} 右边偏移距离
+// @Param {$bottom} 底部偏移距离
+// @Param {$left} 左边偏移距离
+
 @mixin relative ($top, $right, $bottom, $left) {
   position: relative;
   top: $top;
@@ -18,7 +36,13 @@
   left: $left;
 }
 
+
 // 固定定位
+// @Param {$top} 顶部偏移距离
+// @Param {$right} 右边偏移距离
+// @Param {$bottom} 底部偏移距离
+// @Param {$left} 左边偏移距离
+
 @mixin fixed ($top, $right, $bottom, $left) {
   position: fixed;
   top: $top;
@@ -27,78 +51,152 @@
   left: $left;
 }
 
-// 左上角
+
+// 通过定位以左上角定位
+// @Param {$position} 定位方式
+// @Param {$top} 顶部偏移距离
+// @Param {$left} 左边偏移距离
+
 @mixin top-left ($position, $top, $left) {
   position: $position;
   top: $top;
   left: $left;
 }
 
-// Alias 左上角
+
+// Alias `top-left`
+
 @mixin tl ($position, $top, $left) {
   @include top-left ($position, $top, $left);
 }
 
-// 右上角
+
+// 通过定位以右上角定位
+// @Param {$position} 定位方式
+// @Param {$top} 顶部偏移距离
+// @Param {$right} 右边偏移距离
+
 @mixin top-right ($position, $top, $right) {
   position: $position;
   top: $top;
   right: $right;
 }
 
-// Alias 右上角
+
+// Alias `top-right`
+
 @mixin tr ($position, $top, $right) {
   @include top-right($position, $top, $right);
 }
 
-// 左下角
+
+// 通过定位以左下角定位
+// @Param {$position} 定位方式
+// @Param {$bottom} 顶部偏移距离
+// @Param {$left} 左边偏移距离
+
 @mixin bottom-left ($position, $bottom, $left) {
   position: $position;
   bottom: $bottom;
   left: $left;
 }
 
-// Alias 左下角
+
+// Alias `bottom-left`
+
 @mixin bl ($position, $bottom, $left) {
   @include bottom-left ($position, $bottom, $left);
 }
 
-// 右下角
-@mixin bottom-right ($position, $bottom, $right) {
+
+// 通过定位以右下角定位
+// @Param {$position} 定位方式
+// @Param {$bottom} 顶部偏移距离
+// @Param {$right} 右边偏移距离
+
+@mixin  ($position, $bottom, $right) {
   position: $position;
-  bottom: $bottom;
   right: $right;
+  bottom: $bottom;
 }
 
-// Alias 右下角
+
+// Alias `bottom-right`
+
 @mixin br ($position, $bottom, $right) {
   @include bottom-right ($position, $bottom, $right);
 }
 
-// 相对垂直正偏移
+
+// 通过定位相对顶部正偏移
+// @Param {$top} 想对顶部偏移距离
+// @Param {$position} 定位方式
+
 @mixin offset-top ($top, $position: relative) {
   position: $position;
   top: $top;
   transform: translate(0, -50%);
 }
 
-// 相对右边正偏移
+
+// 通过定位相对右边正偏移
+// @Param {$top} 想对右边偏移距离
+// @Param {$position} 定位方式
+
 @mixin offset-right ($right, $position: relative) {
   position: $position;
   top: $right;
   transform: translate(50%, 0);
 }
 
-// 相对左边正偏移
+
+// 通过定位相对左边正偏移
+// @Param {$left} 想对左边偏移距离
+// @Param {$position} 定位方式
+
 @mixin offset-left ($left, $position: relative) {
   position: $position;
   left: $left;
   transform: translate(-50%, 0);
 }
 
-// 相对底部正偏移
+
+// 通过定位相对底部正偏移
+// @Param {$bottom} 想对底部偏移距离
+// @Param {$position} 定位方式
+
 @mixin offset-bottom ($bottom, $position: relative) {
   position: $position;
   bottom: $bottom;
   transform: translate(0, 50%);
+}
+
+
+// 通过定位垂直居中
+// @Param {$position} 定位方式
+
+@mixin vertial-center ($position: absolute) {
+  @include offset-top(50%, $position);
+}
+
+
+// Alias `vertial-center`
+
+@mixin vc ($position: absolute) {
+  @include vertial-center($position);
+}
+
+
+// 通过定位水平居中
+// @Param {$position} 定位方式
+
+@mixin horizontal-center ($position: absolute) {
+  @include offset-left(50%, $position);
+}
+
+
+// Alias `horizontal-center`
+
+@mixin hc ($position: absolute) {
+  @include horizontal-center($position);
 }
