@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@112.74.84.77:Libs/sasskit.git"
+    "url": "git@gitlab.genomics.cn:2200/DTCLab/Library/sasskit.git"
   },
   "keywords": [
     "sass",
