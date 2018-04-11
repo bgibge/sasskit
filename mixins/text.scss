@@ -2,7 +2,7 @@
 * @Author: xsmallbird
 * @Date:   2018-04-11 16:10:44
 * @Last Modified by:   xsmallbird
-* @Last Modified time: 2018-04-11 21:31:39
+* @Last Modified time: 2018-04-11 21:46:38
 * @Description: 文本
 */
 
@@ -31,7 +31,8 @@
 // 文本隐藏
 
 @mixin hidden () {
-  font: 0 / 0 a;
+  // sass-lint:disable space-around-operator
+  font: 0/0;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
