@@ -2,7 +2,7 @@
 * @Author: xsmallbird
 * @Date:   2018-04-09 15:45:06
 * @Last Modified by:   xsmallbird
-* @Last Modified time: 2018-04-11 21:32:00
+* @Last Modified time: 2018-04-12 11:49:11
 * @Description: 定位
 */
 
@@ -114,7 +114,7 @@
 // @Param {$bottom} 顶部偏移距离
 // @Param {$right} 右边偏移距离
 
-@mixin  ($position, $bottom, $right) {
+@mixin bottom-right ($position, $bottom, $right) {
   position: $position;
   right: $right;
   bottom: $bottom;
