@@ -1,6 +1,6 @@
 {
   "name": "sasskit",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "sass中有用的、高效的mixin、class和组件",
   "main": "mixins.scss",
   "dependencies": {
