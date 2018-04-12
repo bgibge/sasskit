@@ -1,9 +1,8 @@
-
 <p align="center">
   <img src="./docs/logo.png"/>
 </p>
 
-<h2 align="center">sass中有用的、高效的mixin、class和组件<h2/>
+sass中有用的、高效的mixin、class和组件
 
 ## 安装
 
