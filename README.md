@@ -2,12 +2,12 @@
   <img src="./docs/logo.png"/>
 </p>
 
-sass中有用的、高效的mixin、class和组件
+sass 中实用用的、高效的 mixin、class 和组件
 
 ## 安装
 
 ```shell
-$ npm install git+ssh://git@gitlab.genomics.cn:2200/DTCLab/Library/sasskit.git
+$ npm install https://github.com/bgibge/sasskit.git
 ```
 
 ## 测试
