@@ -27,12 +27,12 @@ $ npm run test
 
 ### 文件组成
 
-- `./class-mixins/`：特殊的class样式mixin函数集合
-- `./mixins/`：高效的、实用的mixin函数集合
-- `./class-mixins.scss`：./class-mixins/对外出口
-- `./classes.scss`：通用的、常用的class样式
-- `./mixins.scss`：./mixins/对外出口
-- `./reset.scss`：重置并统一不
+- `./class-mixins/`：特殊的 class 样式 mixin 函数集合
+- `./mixins/`：高效的、实用的 mixin 函数集合
+- `./class-mixins.scss`：./class-mixins/ 对外出口
+- `./classes.scss`：通用的、常用的 class 样式
+- `./mixins.scss`：./mixins/ 对外出口
+- `./reset.scss`：重置并统一样式
 - `./variables.scss`： 变量定义
 
 
